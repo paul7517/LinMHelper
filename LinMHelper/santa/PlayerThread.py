@@ -90,6 +90,8 @@ class PlayerThread(Thread):
             if(self.img == None):
                 continue
                 
+            #self.saveImage(self.img, wName, 'debug')
+            
             hp = -1
             mp = -1
             infoToLabel = ""
@@ -129,7 +131,7 @@ class PlayerThread(Thread):
                     self.saveImage(self.img, wName, "血低");  # 可能是被殺，存圖。
                     infoToLabel += "點擊回捲。"
                     
-                    #輸出至console
+                    #特殊狀況，輸出至console
                     self.logToConsole(infoToLabel)
                     
                     lastHomeTeleport = now
@@ -142,7 +144,7 @@ class PlayerThread(Thread):
                     self.saveImage(self.img, wName, "被打");
                     infoToLabel += "被打囉。"
                     
-                    #輸出至console
+                    #特殊狀況，輸出至console
                     self.logToConsole(infoToLabel)
                     
                     lastRndTeleport = now
@@ -205,7 +207,7 @@ class PlayerThread(Thread):
 
 # 存圖
     def saveImage(self, img, wName, type):
-        if(not (path.exists("LinMOut") and path.isdir("LinMOut"))):
+        if(not (path.exists("LinMOut") )):
             mkdir("LinMOut")
         nowStr = strftime('%Y%m%d%H%M%S.png')
         imgName = 'LinMOut/' + wName + "_" + type + '_' + nowStr

@@ -139,7 +139,7 @@ class PlayerThread(Thread):
                     sleepTime = 1
                 elif(teamPosition == 0 and isAttacked and (now - lastRndTeleport).seconds >= 3 and (now - lastHomeTeleport).seconds >= 5):
                     # 被打，點瞬捲(3秒內不連飛，5秒內點過回捲也不飛，避免回村後再飛一次)
-                    # 當組隊情況時teamPosition == 0 (假定人顧在旁邊)，被打不自動飛
+                    # 當組隊情況時teamPosition > 0 (假定人顧在旁邊)，被打不自動飛
                     self.pressKey(hwnd,teleportKey)
                     self.saveImage(self.img, wName, "被打");
                     infoToLabel += "被打囉。"

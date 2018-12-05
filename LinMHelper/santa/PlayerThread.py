@@ -113,8 +113,8 @@ class PlayerThread(Thread):
                 sleepTime = 2
                 #self.doBeep(1)
             else:
-                hp = detectHPPercent(self.img, 0)
-                mp = detectMPPercent(self.img, 0)
+                hp = detectHPPercent(self.img, teamPosition)
+                mp = detectMPPercent(self.img, teamPosition)
                 isAttack = detectIsAttack(self.img)
                 isAttacked = detectIsAttacked(self.img)
                 infoToLabel += "戰鬥狀態:%r," % isAttack
@@ -206,11 +206,11 @@ class PlayerThread(Thread):
             return int(self.readFromConfig(sector, key))
 
 # 存圖
-    def saveImage(self, img, wName, type):
+    def saveImage(self, img, wName, imgType):
         if(not (path.exists("LinMOut") )):
             mkdir("LinMOut")
         nowStr = strftime('%Y%m%d%H%M%S.png')
-        imgName = 'LinMOut/' + wName + "_" + type + '_' + nowStr
+        imgName = 'LinMOut/' + wName + "_" + imgType + '_' + nowStr
         img.save(imgName, "PNG")
         
     def pressKey(self,hwnd,key):

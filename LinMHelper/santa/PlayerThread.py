@@ -162,7 +162,8 @@ class PlayerThread(Thread):
                     self.doBeep(3); # 被打響3聲
                     sleepTime = 0.1
                 elif(hp < hpCure and hp > 0 and mp > 5):
-                    sleepTime = 0.9
+                    #sleepTime = 0.9
+                    sleepTime = 0.3
                     self.pressKey(hwnd,cureKey)
                     infoToLabel += "施放治癒魔法。"
                 elif(mp >= mpProtect and isAttack):
@@ -184,7 +185,7 @@ class PlayerThread(Thread):
             endTime = datetime.now()
             executeTime = (endTime - now).microseconds / 1000
             
-            infoToLabel = 'HP:%03d，MP:%03d，共執行%d微秒，' % (hp, mp, executeTime) + infoToLabel
+            infoToLabel = 'HP:%03d，MP:%03d，共執行%d毫秒，' % (hp, mp, executeTime) + infoToLabel
             
             # 若是選擇的thread，把圖輸出至GUI上
             if(self.i == self.tkObj.showIndex):

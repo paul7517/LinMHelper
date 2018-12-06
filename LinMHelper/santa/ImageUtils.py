@@ -31,6 +31,7 @@ def detectItemSkillPanelOpened(img):
 #判斷血條
 def detectHPPercent(img,teamPosition,rgbValue):
     cnt = 0
+    reverseCnt = 0
     intX1 = int(5.7 * img.width / 100)
     intX2 = int(14.1 * img.width / 100)
     
@@ -44,10 +45,12 @@ def detectHPPercent(img,teamPosition,rgbValue):
     
     y=int(yPercent * img.height /100)
     for x in range(intX1,intX2):
-        if(comparePointRGB(img, x, y, (137,205), (0,15),(0,15),rgbValue)):
+        if(comparePointRGB(img, x, y, (137,205), (0,15),(0,15),rgbValue) or
+           comparePointRGB(img, x, y, (0,20), (25,70),(0,20),rgbValue)):
             cnt+=1
     
-    hpPercent = int(cnt / (intX2-intX1) * 100)
+    hpPercent = int(cnt / (intX2-intX1) * 100)        
+    
     return hpPercent
 
 #判斷HP條

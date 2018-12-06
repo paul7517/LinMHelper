@@ -12,7 +12,7 @@ def detectItemSkillPanelOpened(img):
     cnt = 0
     total = intY2-intY1
     for intY in range(intY1,intY2):
-        if(compareRGB(getPixel(img, intX, intY, 255), (25,40) , (15,30) , (10,25))):
+        if(compareRGB(getPixel(img, intX, intY, -1), (25,40) , (15,30) , (10,25))):
            cnt+=1
                
     return cnt / total * 100 >= 50.0        
@@ -68,7 +68,7 @@ def detectIsAttack(img):
     intX2 = int(85.64 * img.width / 100)
     y = int(69.07 * img.height / 100)
     for x in range(intX1,intX2):
-        isNearAttck = comparePointRGB(img, x, y, (230,255), (200,255), (130,255),-1)
+        isNearAttck = comparePointRGB(img, x, y, (230,255), (200,255), (130,255),0)
         #isFarAttck = comparePointRGB(img, x, y, (90,250), (70,150), (0,90),0)
         isFarAttck = comparePointRGB(img, x, y, (140,255), (70,170), (0,110),0)
         if(isNearAttck or isFarAttck):
@@ -124,7 +124,8 @@ def getPixel(img,intX,intY,rgbValue):
         rgbValue = 0
     
     if(rgbValue >= 0):
-        img.putpixel((intX,intY),(rgbValue,rgbValue,rgbValue))
+        img.putpixel((intX,intY+1),(rgbValue,rgbValue,rgbValue))
+        img.putpixel((intX,intY-1),(rgbValue,rgbValue,rgbValue))
     return rgb
 
 #比對RGB是否有在range裡

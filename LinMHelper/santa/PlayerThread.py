@@ -113,8 +113,8 @@ class PlayerThread(Thread):
                 sleepTime = 2
                 #self.doBeep(1)
             else:
-                hp = detectHPPercent(self.img, teamPosition,-1)
-                mp = detectMPPercent(self.img, teamPosition,-1)
+                hp = detectHPPercent(self.img, teamPosition,255)
+                mp = detectMPPercent(self.img, teamPosition,255)
                 
                 #若是設置的position取不到，則重拿position 0的hp、mp
                 #設置hp==0 and mp==0 可以防止中毒時閃爍誤拿數值

@@ -109,45 +109,43 @@ def getWindow_Img(hwnd):
 
 def getControlID(hwnd):
     id = FindWindowEx(hwnd,0,None,None)
-    id = FindWindowEx(hwnd,id,None,None)
-    return id
+    id1 = FindWindowEx(hwnd,id,None,None)
+    id2 = FindWindowEx(hwnd,id1,None,None)
+    #print(id)
+    
+    #20181207
+    #相容於NoxPlayer6.0.8.0之後的版本，Window Component多一個原素，兩個原素都發送key。
+    #錯誤的原素多送key不會有反應，應該是沒有副作用
+    return (id1,id2)
 
-'''
-#Shell的方法，但是會影響到平常電腦操作，不建議使用
 def postMessage(hwnd,key):
     ch = ['1','2','3','4','5','6','7','8','9']
     if(ch.index(key) >= 0):
         k = 0x31 + ch.index(key)
-        controlID = getControlID(hwnd)
-        shell = win32com.client.Dispatch("WScript.Shell")
-        shell.SendKeys(key)
-        win32gui.SetForegroundWindow(hwnd)
-        #PostMessage(controlID,win32con.WM_KEYDOWN,k,0)
-        #PostMessage(controlID,win32con.WM_KEYUP,k,0)
-    else:
-        print('設定的熱鍵不合法，只能為1-9')
-'''
-def postMessage(hwnd,key):
-    ch = ['1','2','3','4','5','6','7','8','9']
-    if(ch.index(key) >= 0):
-        k = 0x31 + ch.index(key)
-        controlID = getControlID(hwnd)
+        (id1,id2) = getControlID(hwnd)
+        
         try:
             win32gui.SetForegroundWindow(hwnd)
         except:
-            void
-            
-        PostMessage(controlID,win32con.WM_KEYDOWN,k,0)
-        PostMessage(controlID,win32con.WM_KEYUP,k,0)
+            pass
+        
+        #20181207
+        #相容於NoxPlayer6.0.8.0之後的版本，Window Component多一個原素，兩個原素都發送key。
+        #錯誤的原素多送key不會有反應，應該是沒有副作用
+        PostMessage(id1,win32con.WM_KEYDOWN,k,0)
+        PostMessage(id1,win32con.WM_KEYUP,k,0)
+        PostMessage(id2,win32con.WM_KEYDOWN,k,0)
+        PostMessage(id2,win32con.WM_KEYUP,k,0)
     else:
         print('設定的熱鍵不合法，只能為1-9')
 
 def setWindowPosition(hwnd,x,y,width,height):
     win32gui.SetWindowPos(hwnd, win32con.HWND_BOTTOM, x, y, width, height, win32con.SWP_NOACTIVATE)
-''' Temp to Delete
-def getRGB(img,x,y):
-    #在array裡pixcel是[Height][Width]儲存
-    #每個cell存放 BGRA
-    b,g,r,a=img[y][x]
-    return (r,g,b)
+
+#以下是測試程式碼
+'''
+hwnd = FindWindow_bySearch('NoxPlayer')
+for c in '123456789':
+    sleep(1)
+    postMessage(hwnd, c)
 '''

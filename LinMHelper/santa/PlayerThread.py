@@ -38,9 +38,7 @@ class PlayerThread(Thread):
             self.wBtn['text'] = '已停止'
             return
         
-        controlID = getControlID(hwnd)
-        
-        print('Thread-%d:wName=%s,HWND=%d,ControlID=%d,profileName=%s' % (self.i, wName, hwnd,controlID, wProfile))
+        print('Thread-%d:wName=%s,HWND=%d,profileName=%s' % (self.i, wName, hwnd, wProfile))
         
         lastHomeTeleport = datetime.now()
         lastRndTeleport = datetime.now()

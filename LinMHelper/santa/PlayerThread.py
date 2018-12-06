@@ -113,8 +113,15 @@ class PlayerThread(Thread):
                 sleepTime = 2
                 #self.doBeep(1)
             else:
-                hp = detectHPPercent(self.img, teamPosition)
-                mp = detectMPPercent(self.img, teamPosition)
+                hp = detectHPPercent(self.img, teamPosition,-1)
+                mp = detectMPPercent(self.img, teamPosition,-1)
+                
+                #若是設置的position取不到，則重拿position 0的hp、mp
+                #設置hp==0 and mp==0 可以防止中毒時閃爍誤拿數值
+                if(hp == 0 and mp ==0):
+                    hp = detectHPPercent(self.img, 0,255)
+                    mp = detectMPPercent(self.img, 0,255)
+                    
                 isAttack = detectIsAttack(self.img)
                 isAttacked = detectIsAttacked(self.img)
                 infoToLabel += "戰鬥狀態:%r," % isAttack

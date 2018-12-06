@@ -3,7 +3,8 @@ from santa.Lib32 import FindWindow_bySearch, getWindow_Img, getControlID,\
 from _datetime import datetime
 from PIL.ImageTk import PhotoImage
 from santa.ImageUtils import detectTeamEnabled, detectItemSkillPanelOpened, \
-    detectHPPercent, detectMPPercent, detectIsAttack, detectIsAttacked
+    detectHPPercent, detectMPPercent, detectIsAttack, detectIsAttacked,\
+    detectTeamPositionAvalible
 from threading import Thread
 from configparser import ConfigParser
 from time import sleep,strftime
@@ -96,6 +97,7 @@ class PlayerThread(Thread):
             mp = -1
             infoToLabel = ""
             isTeamEnabled = detectTeamEnabled(self.img)
+            isTeamPositionAvailible = detectTeamPositionAvalible(self.img, teamPosition)
             isRightPanelOpened = detectItemSkillPanelOpened(self.img)
             # print('PanelOpened = %r' %isRightPanelOpened)            
             
@@ -118,7 +120,8 @@ class PlayerThread(Thread):
                 
                 #若是設置的position取不到，則重拿position 0的hp、mp
                 #設置hp==0 and mp==0 可以防止中毒時閃爍誤拿數值
-                if(hp == 0 and mp ==0):
+                #若是mp條為空，且剛好有藍色id在其位置會造成取得的mp>0而誤判，加上isTeamEnabled進行保護
+                if(not isTeamEnabled or (hp == 0 and mp <=0)):
                     hp = detectHPPercent(self.img, 0,255)
                     mp = detectMPPercent(self.img, 0,255)
                     

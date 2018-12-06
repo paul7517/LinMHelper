@@ -2,7 +2,18 @@
 def detectTeamEnabled(img):
     isC1Matched = comparePointRGBSum(img, 10.25, 24.28, 700, 770)
     isC2Matched = comparePointRGBSum(img, 27.55, 23.85, 700, 770)
+    isC3Matched = comparePointRGBSum(img, 17.2, 34.7, 700, 770)
     return isC1Matched and isC2Matched
+
+def detectTeamPositionAvalible(img,teamPosition):
+    x=17.2
+    
+    position = teamPosition
+    if(position >= 1):  position-=1
+    y=34.7 + 8.8*position
+    
+    matched = comparePointRGBSum(img, x, y, 700, 770)
+    return matched
 
 def detectItemSkillPanelOpened(img):
     intX=int(71.23 * img.width / 100)

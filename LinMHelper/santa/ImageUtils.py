@@ -23,10 +23,11 @@ def detectItemSkillPanelOpened(img):
     cnt = 0
     total = intY2-intY1
     for intY in range(intY1,intY2):
-        if(compareRGB(getPixel(img, intX, intY, -1), (25,40) , (15,30) , (10,25))):
+        if(compareRGB(getPixel(img, intX, intY, -1), (25,40) , (15,30) , (10,25)) 
+           or compareRGB(getPixel(img, intX, intY, -1), (15,25) , (15,25) , (15,25))):
            cnt+=1
-               
-    return cnt / total * 100 >= 50.0        
+    #print(cnt / total * 100)    
+    return cnt / total * 100 >= 72.0        
 
 #判斷血條
 def detectHPPercent(img,teamPosition,rgbValue):
@@ -148,7 +149,7 @@ def getPixel(img,intX,intY,rgbValue):
     
     #work around
     if(rgbValue == -2):
-        rgbValue = 0
+        print(rgb)
     
     if(rgbValue >= 0):
         img.putpixel((intX,intY+1),(rgbValue,rgbValue,rgbValue))

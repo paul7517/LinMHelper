@@ -168,10 +168,10 @@ class PlayerThread(Thread):
                     sleepTime = 0.9
                     self.pressKey(hwnd,majorAttackKey)
                     infoToLabel += "施放攻擊魔法。"
-                elif(not isAttack and mp < 95 and role == 'ELF' and mp >= 0):
+                elif(not isAttack and mp < 90 and role == 'ELF' and mp >= 0):
                     sleepTime = 2
                     self.pressKey(hwnd,transHpKey)
-                    infoToLabel += "MP<95%，施放魂體轉換。"
+                    infoToLabel += "MP<90%，施放魂體轉換。"
                 elif(mp < mpProtect and hp >= mpTransHP):
                     sleepTime = 2
                     self.pressKey(hwnd,transHpKey)

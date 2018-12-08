@@ -55,7 +55,8 @@ def detectHPPercent(img,teamPosition,rgbValue):
         
         if(comparePointRGB(img, x, y, (137,205), (0,15),(0,15),rgbValue)):
             cnt+=1
-        elif(g - 20 > r and g-20 > b and r < 80 and b < 55):
+        #elif(g - 20 > r and g-20 > b and r < 80 and b < 55):
+        elif(g - 20 >= r and g-20 >= b and r < 100 and b < 75):
             poisonCnt += 1
     
     if(cnt == 0):
@@ -152,8 +153,8 @@ def getPixel(img,intX,intY,rgbValue):
         print(rgb)
     
     if(rgbValue >= 0):
-        img.putpixel((intX,intY+1),(rgbValue,rgbValue,rgbValue))
         img.putpixel((intX,intY-1),(rgbValue,rgbValue,rgbValue))
+        #img.putpixel((intX,intY+1),(rgbValue,rgbValue,rgbValue))
     return rgb
 
 #比對RGB是否有在range裡

@@ -95,7 +95,6 @@ class PlayerThread(Thread):
             mp = -1
             infoToLabel = ""
             isTeamEnabled = detectTeamEnabled(self.img)
-            isTeamPositionAvailible = detectTeamPositionAvalible(self.img, teamPosition)
             isRightPanelOpened = detectItemSkillPanelOpened(self.img)
             # print('PanelOpened = %r' %isRightPanelOpened)            
             
@@ -113,16 +112,13 @@ class PlayerThread(Thread):
                 sleepTime = 2
                 #self.doBeep(1)
             else:
-                if(isTeamPositionAvailible):
+                if(detectTeamPositionAvalible(self.img, teamPosition)):
                     hp = detectHPPercent(self.img, teamPosition,255)
                     mp = detectMPPercent(self.img, teamPosition,255)
-                
-                #若是設置的position取不到，則重拿position 0的hp、mp
-                #設置hp==0 and mp==0 可以防止中毒時閃爍誤拿數值
-                #若是mp條為空，且剛好有藍色id在其位置會造成取得的mp>0而誤判，加上isTeamEnabled進行保護
-                if(not isTeamEnabled or (hp <= 5 and mp <=5)):
+                elif(detectTeamPositionAvalible(self.img, 0)):                    
                     hp = detectHPPercent(self.img, 0,255)
                     mp = detectMPPercent(self.img, 0,255)
+                
                     
                 isAttack = detectIsAttack(self.img)
                 isAttacked = detectIsAttacked(self.img)
@@ -219,7 +215,7 @@ class PlayerThread(Thread):
     def saveImage(self, img, wName, imgType):
         if(not (path.exists("LinMOut") )):
             mkdir("LinMOut")
-        nowStr = strftime('%Y%m%d%H%M%S.png')
+        nowStr = strftime('%Y%m%d-%H-%M-%S.png')
         imgName = 'LinMOut/' + wName + "_" + imgType + '_' + nowStr
         img.save(imgName, "PNG")
         

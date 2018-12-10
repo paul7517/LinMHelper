@@ -34,7 +34,8 @@ def detectHPPercent(img,teamPosition,rgbValue):
     cnt = 0
     poisonCnt = 0
     
-    #outStr=''
+    debug = False
+    poisonOut = ''
     
     intX1 = int(5.7 * img.width / 100)
     intX2 = int(14.1 * img.width / 100)
@@ -52,20 +53,24 @@ def detectHPPercent(img,teamPosition,rgbValue):
         rgb = getPixel(img, x, y, rgbValue)
         r = rgb[0]; g=rgb[1]; b=rgb[2]
         #outStr += '%d , %d , %d\n'  % (rgb[0],rgb[1],rgb[2]) 
+        if(debug): poisonOut += 'R=%d,G=%d,B=%d\n'  % (r,g,b,)
         
         if(comparePointRGB(img, x, y, (137,205), (0,15),(0,15),rgbValue)):
             cnt+=1
         #elif(g - 20 > r and g-20 > b and r < 80 and b < 55):
-        elif(g - 20 >= r and g-20 >= b and r < 100 and b < 75):
+        #elif(g - 20 >= r and g-20 >= b and r < 100 and b < 75):
+        elif(g + 20 >= r and g-20 >= b and r < 100 and b < 75):
             poisonCnt += 1
+            
     
-    if(cnt == 0):
-        pass#print(outStr + '\n\n\n\n')
+    if(cnt == 0):  cnt = poisonCnt
     
+    hpPercent = int(cnt / (intX2-intX1) * 100)       
     
-    cnt += poisonCnt
-    hpPercent = int(cnt / (intX2-intX1) * 100)        
-    #print(hpPercent)
+    #中毒的時候還是會有誤判的時候，試著把誤判的情況印出來。
+    if(debug and hpPercent < 50 and cnt == poisonCnt):
+        print(poisonOut) 
+
     return hpPercent
 
 #判斷HP條

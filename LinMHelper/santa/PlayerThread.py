@@ -73,6 +73,14 @@ class PlayerThread(Thread):
             # round開始
             now = datetime.now()
             
+            h = int(now.strftime('%H'))
+            m = int(now.strftime('%M'))
+            s=int(now.strftime('%S'))
+            
+            #在下列時段進入副本
+            if(h in (12,18,20) and m ==51 and 5 <= s <=10):
+                self.questRun(hwnd,backHomeKey)
+            
             #判斷隱藏遊戲視窗
             x,y,width,height = getWindow_W_H(hwnd)
             #print(x,',',y)
@@ -237,3 +245,24 @@ class PlayerThread(Thread):
         output += msg
         print(output)
         
+    def questRun(self,hwnd,backHomeKey):
+        print('進入副本腳本，先按回捲。') 
+        self.pressKey(hwnd,backHomeKey)        
+        print('避免村莊lag，等個 5sec')
+        sleep(5)
+        
+        print('點擊世界王按鈕(請設為0熱鍵)')
+        self.pressKey(hwnd, '0')
+        sleep(2)
+        print('點擊確認')
+        self.pressKey(hwnd, '2')
+        
+        print('等待世界王開始')
+        while(True):
+            sleep(10)
+            min =int(datetime.now().strftime('%M'))
+            if(min == 0):
+                self.pressKey(hwnd, 'z')
+                break
+            
+        print('開始打王！結束腳本')

@@ -5,7 +5,7 @@ from win32ui import CreateDCFromHandle,CreateBitmap
 from numpy import fromstring
 from cv2 import cvtColor,COLOR_BGR2RGB
 from PIL import Image
-from win32gui import FindWindowEx, PostMessage, SetForegroundWindow
+from win32gui import FindWindowEx, PostMessage, SetForegroundWindow, SendMessage
 from time import sleep
 from numpy.core.numerictypes import void
 from sys import exc_info
@@ -119,9 +119,13 @@ def getControlID(hwnd):
     return (id1,id2)
 
 def postMessage(hwnd,key):
-    ch = ['1','2','3','4','5','6','7','8','9']
+    ch = ['0','1','2','3','4','5','6','7','8','9','z']
     if(ch.index(key) >= 0):
-        k = 0x31 + ch.index(key)
+        k = 0x30 + ch.index(key)
+        
+        #先hard code，以後有更多應用再來改
+        if(key == 'z'): k = 0x5A
+        
         (id1,id2) = getControlID(hwnd)
         
         try:
@@ -132,12 +136,17 @@ def postMessage(hwnd,key):
         #20181207
         #相容於NoxPlayer6.0.8.0之後的版本，Window Component多一個原素，兩個原素都發送key。
         #錯誤的原素多送key不會有反應，應該是沒有副作用
-        PostMessage(id1,win32con.WM_KEYDOWN,k,0)
-        PostMessage(id1,win32con.WM_KEYUP,k,0)
-        PostMessage(id2,win32con.WM_KEYDOWN,k,0)
-        PostMessage(id2,win32con.WM_KEYUP,k,0)
+        SendMessage(id1,win32con.WM_KEYDOWN,k,0)
+        SendMessage(id1,win32con.WM_KEYUP,k,0)
+        SendMessage(id2,win32con.WM_KEYDOWN,k,0)
+        SendMessage(id2,win32con.WM_KEYUP,k,0)
+        
+        #PostMessage(id1,win32con.WM_KEYDOWN,k,0)
+        #PostMessage(id1,win32con.WM_KEYUP,k,0)
+        #PostMessage(id2,win32con.WM_KEYDOWN,k,0)
+        #PostMessage(id2,win32con.WM_KEYUP,k,0)
     else:
-        print('設定的熱鍵不合法，只能為1-9')
+        print('設定的熱鍵不合法，只能為0-9')
 
 def setWindowPosition(hwnd,x,y,width,height):
     win32gui.SetWindowPos(hwnd, win32con.HWND_BOTTOM, x, y, width, height, win32con.SWP_NOACTIVATE)

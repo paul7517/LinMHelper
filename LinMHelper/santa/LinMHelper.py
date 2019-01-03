@@ -35,6 +35,22 @@ class LinMHelperApp():
 
         #root.bind('<Escape>', lambda e: self.root.destroy())        
         #self.newFrame()
+        
+        self.bossTimeList = ['13:00' , '19:00' , '20:00' , '21:00' , '22:00' , '23:00']
+        self.bossTimeVariable = []
+        timeFrame = tk.Frame(self.root)
+        timeFrame.anchor('w')
+        timeFrame.pack()
+        
+        tk.Label(timeFrame,text = '自動世界王時段:').grid(row = 1,column = 1)
+        
+        for i in range(6):
+            self.bossTimeVariable.append(tk.IntVar())
+            checker = tk.Checkbutton(timeFrame,text = self.bossTimeList[i] , variable = self.bossTimeVariable[i])
+            if i in [0,1,3]:
+                checker.select()
+            checker.grid(row = 1 , column = i+2)
+        
         self.loadConfig()
         
         self.hideWindowVar = tk.IntVar()

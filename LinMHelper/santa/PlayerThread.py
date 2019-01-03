@@ -1,6 +1,6 @@
 from santa.Lib32 import FindWindow_bySearch, getWindow_Img, getControlID,\
     postMessage, getWindow_W_H, setWindowPosition
-from _datetime import datetime
+from _datetime import datetime, timedelta
 from PIL.ImageTk import PhotoImage
 from santa.ImageUtils import detectTeamEnabled, detectItemSkillPanelOpened, \
     detectHPPercent, detectMPPercent, detectIsAttack, detectIsAttacked,\
@@ -10,6 +10,7 @@ from configparser import ConfigParser
 from time import sleep,strftime
 from os import mkdir,path
 from winsound import Beep
+from calendar import weekday
 
 class PlayerThread(Thread):
     # 取得config 檔
@@ -69,17 +70,28 @@ class PlayerThread(Thread):
             else:
                 # 預設1 round的sleep秒數，後面會隨施放技能不同而改變
                 sleep(sleepTime)
-            
-            # round開始
+
             now = datetime.now()
             
-            h = int(now.strftime('%H'))
             m = int(now.strftime('%M'))
             s=int(now.strftime('%S'))
+            weekDay = now.weekday()
+            runBoss = 0
             
-            #在下列時段進入副本
-            if(h in (12,18,20) and m ==51 and 5 <= s <=10):
-                self.questRun(hwnd,backHomeKey)
+            if(m == 51 and 5 <= s <= 10):
+                nextBossTimeStr = (now + timedelta(minutes = 9)).strftime('%H:%M')           
+                try:
+                    idx = self.tkObj.bossTimeList.index(nextBossTimeStr) #檢查是否為世界王時段
+                    runBoss = self.tkObj.bossTimeVariable[idx].get() #檢查checkbox
+                    
+                    #週日19:00、20:00場次沒開
+                    if idx in [1,2] and weekDay == 6:
+                        runBoss = 0
+                        
+                    if runBoss == 1:
+                        self.questRun(hwnd,backHomeKey)                        
+                except:
+                        runBoss = 0
             
             #判斷隱藏遊戲視窗
             x,y,width,height = getWindow_W_H(hwnd)

@@ -188,7 +188,7 @@ class PlayerThread(Thread):
                     sleepTime = 2
                     self.pressKey(hwnd,transHpKey)
                     infoToLabel += "MP<90%，施放魂體轉換。"
-                elif(mp < mpProtect and hp >= mpTransHP):
+                elif(mp < mpProtect and mp < 90 and hp >= mpTransHP):
                     sleepTime = 2
                     self.pressKey(hwnd,transHpKey)
                     infoToLabel += "施放魂體轉換。"

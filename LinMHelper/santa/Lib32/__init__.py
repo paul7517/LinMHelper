@@ -9,6 +9,7 @@ from win32gui import FindWindowEx, PostMessage, SetForegroundWindow, SendMessage
 from time import sleep
 from numpy.core.numerictypes import void
 from sys import exc_info
+from ctypes.wintypes import WPARAM
 
 
 def FindWindow_bySearch(pattern):

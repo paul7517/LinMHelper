@@ -1,0 +1,4 @@
+pypiwin32
+numpy
+opencv-python
+Pillow

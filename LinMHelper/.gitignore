@@ -1,8 +1,9 @@
-/build/
-/dist/
-/main.spec
+build
+dist
+LinMOut
+profile/
 /.project
 /.pydevproject
-/__pycache__
-/LinMOut/*
 /Main.old.ini
+/main.spec
+__pycache__

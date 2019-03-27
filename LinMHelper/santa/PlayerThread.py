@@ -16,6 +16,7 @@ class PlayerThread(Thread):
     # 取得config 檔
     profileConfig = ConfigParser()
     img = None
+    beforeMinutes = 5
     
     def __init__(self, i , tkObj):
         super(PlayerThread, self).__init__()
@@ -78,8 +79,8 @@ class PlayerThread(Thread):
             weekDay = now.weekday()
             runBoss = 0
             
-            if(m == 51 and 5 <= s <= 10):
-                nextBossTimeStr = (now + timedelta(minutes = 9)).strftime('%H:%M')           
+            if(m == (60 - self.beforeMinutes) and 5 <= s <= 10):
+                nextBossTimeStr = (now + timedelta(minutes = self.beforeMinutes)).strftime('%H:%M')           
                 try:
                     idx = self.tkObj.bossTimeList.index(nextBossTimeStr) #檢查是否為世界王時段
                     runBoss = self.tkObj.bossTimeVariable[idx].get() #檢查checkbox

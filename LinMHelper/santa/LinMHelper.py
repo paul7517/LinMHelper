@@ -36,7 +36,7 @@ class LinMHelperApp():
         #root.bind('<Escape>', lambda e: self.root.destroy())        
         #self.newFrame()
         
-        self.bossTimeList = ['13:00' , '19:00' , '20:00' , '21:00' , '22:00' , '23:00']
+        self.bossTimeList = ['12:00' , '13:00' , '19:00' , '20:00' , '21:00' , '22:00']
         self.bossTimeVariable = []
         timeFrame = tk.Frame(self.root)
         timeFrame.anchor('w')

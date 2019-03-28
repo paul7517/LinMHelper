@@ -1,0 +1,18 @@
+
+PS D:\Program Files\Nox\bin> .\adb devices
+List of devices attached
+emulator-5574   host
+emulator-5572   host
+emulator-5570   host
+emulator-5556   host
+emulator-5554   host
+emulator-5582   host
+emulator-5578   host
+127.0.0.1:62001 device
+127.0.0.1:62025 device
+
+
+PS D:\Program Files\Nox\bin> .\adb.exe -s 127.0.0.1:62001 shell input tap 200 10
+
+
+NoxConsole.exe adb -name:我的模擬器 -command:"shell pm list packages"

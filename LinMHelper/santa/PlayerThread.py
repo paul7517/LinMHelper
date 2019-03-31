@@ -86,7 +86,7 @@ class PlayerThread(Thread):
                     runBoss = self.tkObj.bossTimeVariable[idx].get() #檢查checkbox
                     
                     #週日19:00、20:00場次沒開
-                    if idx in [1,2] and weekDay == 6:
+                    if idx in [2,3] and weekDay == 6:
                         runBoss = 0
                         
                     if runBoss == 1:

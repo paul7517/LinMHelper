@@ -122,8 +122,12 @@ class PlayerThread(Thread):
             #如果超過次數沒有偵測到攻擊，發出聲響。
             if(notAttackCnt >= notAttackAlertTimes):
                 self.doBeep(8)
-                self.logToConsole('%s-超過%d秒沒有偵測到攻擊，發出聲音。' % (wName , notAttackAlertTimes*2))
-                notAttackAlertTimes *= 2
+                self.logToConsole(f'{wName}-超過{notAttackCnt}秒沒有偵測到攻擊，發出聲音')
+                #self.logToConsole('%s-超過%d秒沒有偵測到攻擊，發出聲音。' % (wName , notAttackAlertTimes*2))
+                if notAttackAlertTimes == 60: 
+                    notAttackAlertTimes = 600 
+                else: 
+                    notAttackAlertTimes *= 2
             
             if(not(isTeamEnabled and not isRightPanelOpened)):
                 if(not isTeamEnabled): infoToLabel = "無法偵測組隊狀態"

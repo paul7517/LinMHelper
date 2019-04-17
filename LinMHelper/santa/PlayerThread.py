@@ -153,7 +153,7 @@ class PlayerThread(Thread):
                     notAttackCnt+=1
                 else:
                     notAttackCnt = 0
-                    notAttackAlertTimes=30
+                    notAttackAlertTimes=60
                 
                 # 血量夠低且距離上次回捲超過30秒才飛
                 if (hp < hpBackHome and hp > 0 and (now - lastHomeTeleport).seconds >= 30): 

@@ -124,8 +124,8 @@ class PlayerThread(Thread):
                 self.doBeep(8)
                 self.logToConsole(f'{wName}-超過{notAttackCnt}秒沒有偵測到攻擊，發出聲音')
                 #self.logToConsole('%s-超過%d秒沒有偵測到攻擊，發出聲音。' % (wName , notAttackAlertTimes*2))
-                if notAttackAlertTimes == 60: 
-                    notAttackAlertTimes = 600 
+                if notAttackAlertTimes == 30: 
+                    notAttackAlertTimes = 300 
                 else: 
                     notAttackAlertTimes *= 2
             
@@ -153,7 +153,7 @@ class PlayerThread(Thread):
                     notAttackCnt+=1
                 else:
                     notAttackCnt = 0
-                    notAttackAlertTimes=60
+                    notAttackAlertTimes=30
                 
                 # 血量夠低且距離上次回捲超過30秒才飛
                 if (hp < hpBackHome and hp > 0 and (now - lastHomeTeleport).seconds >= 30): 

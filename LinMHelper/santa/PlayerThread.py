@@ -127,7 +127,7 @@ class PlayerThread(Thread):
                 #self.pressKey(hwnd,cureKey)
                 #sleep(2)
                 #self.pressKey(hwnd,cureKey)
-                if notAttackAlertTimes == 30: saveImage(self.img,wName,"偵測不到。")
+                if notAttackAlertTimes == 30: self.saveImage(self.img,wName,"偵測不到。")
 
                 notAttackAlertTimes = 300 if notAttackAlertTimes == 30 else notAttackAlertTimes * 2
             

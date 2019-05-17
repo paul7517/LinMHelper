@@ -120,13 +120,14 @@ def getControlID(hwnd):
     return (id1,id2)
 
 def postMessage(hwnd,key):
-    ch = ['0','1','2','3','4','5','6','7','8','9','z']
+    ch = ['0','1','2','3','4','5','6','7','8','9','y','z']
     if(ch.index(key) >= 0):
         k = 0x30 + ch.index(key)
         
         #先hard code，以後有更多應用再來改
+        if(key == 'y'): k = 0x59
         if(key == 'z'): k = 0x5A
-        
+            
         (id1,id2) = getControlID(hwnd)
         
         try:

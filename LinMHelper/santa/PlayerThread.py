@@ -64,6 +64,9 @@ class PlayerThread(Thread):
         #用來紀錄非攻擊狀態的次數
         notAttackCnt = 0
         notAttackAlertTimes = 30
+
+        #用來記錄畫面是否變灰及變暗
+        darkCnt = 0
         
         while True:
             if(self.wBtn['text'] == '已停止'):
@@ -115,19 +118,34 @@ class PlayerThread(Thread):
             hp = -1
             mp = -1
             infoToLabel = ""
-            isTeamEnabled = detectTeamEnabled(self.img)
+            isTeamEnabled , isGrey = detectTeamEnabled(self.img)
             isRightPanelOpened = detectItemSkillPanelOpened(self.img)
             # print('PanelOpened = %r' %isRightPanelOpened)            
             
+            if isGrey > 0:
+                if isGrey == 2: #情境:對話確認視窗    
+                    darkCnt += 1                                
+                elif isGrey == 1:#情況: 對話中，但無確認視窗
+                    self.doBeep(1)
+                    self.logToConsole(f'[Beta][{wName}]可能是任務完成，無確認視窗按任意鍵繼續(預設攻擊鍵)。')
+                    self.pressKey(hwnd,majorAttackKey)
+
+                if darkCnt == 5:
+                    self.doBeep(1)
+                    darkCnt = 0
+                    self.logToConsole(f'[Beta][{wName}]可能是任務完成，並且在確認視窗(按確認鈕)。')      
+                    self.pressKey(hwnd,'y')               
+                
+                sleep(2)
+                #迴圈重來
+                continue
+            else:
+                darkCnt = 0 
+
             #如果超過次數沒有偵測到攻擊，發出聲響。
             if(notAttackCnt >= notAttackAlertTimes):
                 self.doBeep(8)
-                self.logToConsole(f'{wName}-超過{notAttackCnt}秒沒有偵測到攻擊，發出聲音。')
-                #self.logToConsole(f'beta:避免死掉，補兩次血(間隔2秒)。')                
-                #self.pressKey(hwnd,cureKey)
-                #sleep(2)
-                #self.pressKey(hwnd,cureKey)
-                if notAttackAlertTimes == 30: self.saveImage(self.img,wName,"偵測不到。")
+                self.logToConsole(f'{wName}-超過{notAttackCnt}秒沒有偵測到攻擊，發出聲音。')                    
 
                 notAttackAlertTimes = 300 if notAttackAlertTimes == 30 else notAttackAlertTimes * 2
             

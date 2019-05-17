@@ -1,9 +1,31 @@
 
 def detectTeamEnabled(img):
-    isC1Matched = comparePointRGBSum(img, 10.25, 24.28, 700, 770)
-    isC2Matched = comparePointRGBSum(img, 27.55, 23.85, 700, 770)
+    c1X , c1Y = 10.25 , 24.28
+    c2X , c2Y = 27.55 , 23.85
+
+    greyRange = (110,125)
+    DarkRange = (55,70)
+
+    #比對的點在一般畫面接近全白，故判斷RGB總合>700
+    #在對話中，會變灰值會介於110至125之間
+    isC1Matched = comparePointRGBSum(img, c1X , c1Y, 700, 770,-1)#-1代表不override pixel
+    isC2Matched = comparePointRGBSum(img, c2X , c2Y, 700, 770,-1)#-1代表不override pixel
+    isTeamEnabled = isC1Matched and isC2Matched
+
+    isC1Grey = comparePointRGB(img , c1X , c1Y , greyRange , greyRange , greyRange , -1)
+    isC2Grey = comparePointRGB(img , c2X , c2Y , greyRange , greyRange , greyRange , -1)
+
+    isC1Dark = comparePointRGB(img , c1X , c1Y , DarkRange , DarkRange , DarkRange , 0)
+    isC2Dark = comparePointRGB(img , c2X , c2Y , DarkRange , DarkRange , DarkRange , 0)
+
+    isGrey = 0 
+    if isC1Grey and isC2Grey:
+        isGrey = 1
+    elif isC1Dark and isC2Dark:
+        isGrey = 2
+        
     #isC3Matched = comparePointRGBSum(img, 17.2, 34.7, 700, 770)
-    return isC1Matched and isC2Matched
+    return isTeamEnabled , isGrey
 
 def detectTeamPositionAvalible(img,teamPosition):
     x=17.2
@@ -12,7 +34,7 @@ def detectTeamPositionAvalible(img,teamPosition):
     if(position >= 1):  position-=1
     y=34.7 + 8.8*position
     
-    matched = comparePointRGBSum(img, x, y, 700, 770)
+    matched = comparePointRGBSum(img, x, y, 700, 770,0)
     return matched
 
 def detectItemSkillPanelOpened(img):
@@ -129,25 +151,32 @@ def detectIsAttacked(img):
         return True
 
 #比較單點的RGB總合
-def comparePointRGBSum(img,x,y,rgb_bound1,rgb_bound2):
-    if(isinstance(x, float) or isinstance(y, float)):
-        intX , intY = int(x * img.width / 100) , int(y*img.height / 100) 
-    else:
-        intX , intY = x , y
+def comparePointRGBSum(img,x,y,rgb_bound1,rgb_bound2,overrideValue):
+    intX , intY = convertIntPosition(img,x,y)
         
-    r,g,b = getPixel(img, intX, intY, 0)
+    r,g,b = getPixel(img, intX, intY, overrideValue)
     rgbSum = r + g + b
     return rgbSum >= rgb_bound1 and rgbSum <= rgb_bound2
 
 #比對單點的R、G、B範圍
 def comparePointRGB(img,x,y,r_range,g_range,b_range,rgbValue):
-    rgb = getPixel(img, x, y, rgbValue)
+    intX , intY = convertIntPosition(img,x,y)
+
+    rgb = getPixel(img, intX, intY, rgbValue)
     rst = compareRGB(rgb, r_range, g_range, b_range)
     
     if(rgbValue== -2):
         if(not rst):
             print('RGB:%d,%d,%d , Range is %d~%d,%d~%d,%d~%d' %(rgb[0],rgb[1],rgb[2],r_range[0],r_range[1],g_range[0],g_range[1],b_range[0],b_range[1]))
     return rst
+
+def convertIntPosition(img,fX,fY):
+    if isinstance(fX,float) and isinstance(fY,float):
+        intX , intY = int(fX * img.width / 100) , int(fY * img.height / 100) 
+    else:
+        intX , intY = fX , fY
+    
+    return intX , intY
 
 #取得img裡的pixel rgb (主要用以在圖上mark)
 def getPixel(img,intX,intY,rgbValue):

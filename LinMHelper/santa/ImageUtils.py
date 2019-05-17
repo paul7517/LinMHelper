@@ -124,7 +124,7 @@ def detectIsAttack(img):
     intX2 = int(85.64 * img.width / 100)
     y = int(69.07 * img.height / 100)
     for x in range(intX1,intX2):
-        isNearAttck = comparePointRGB(img, x, y, (230,255), (200,255), (130,255),0)
+        isNearAttck = comparePointRGB(img, x, y, (230,255), (200,255), (130,255),-1)
         #isFarAttck = comparePointRGB(img, x, y, (90,250), (70,150), (0,90),0)
         isFarAttck = comparePointRGB(img, x, y, (140,255), (70,170), (0,110),0)
         if(isNearAttck or isFarAttck):

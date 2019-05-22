@@ -77,25 +77,9 @@ class PlayerThread(Thread):
 
             now = datetime.now()
             
-            m = int(now.strftime('%M'))
-            s=int(now.strftime('%S'))
-            weekDay = now.weekday()
-            runBoss = 0
-            
-            if(m == (60 - self.beforeMinutes) and 5 <= s <= 10):
-                nextBossTimeStr = (now + timedelta(minutes = self.beforeMinutes)).strftime('%H:%M')           
-                try:
-                    idx = self.tkObj.bossTimeList.index(nextBossTimeStr) #檢查是否為世界王時段
-                    runBoss = self.tkObj.bossTimeVariable[idx].get() #檢查checkbox
-                    
-                    #週日19:00、20:00場次沒開
-                    if idx in [2,3] and weekDay == 6:
-                        runBoss = 0
-                        
-                    if runBoss == 1:
-                        self.questRun(hwnd,backHomeKey)                        
-                except:
-                        runBoss = 0
+            #判斷是不是世界王時段，若是，執行世界王腳本
+            if self.isRunBoss():
+                self.bossQuestRun(hwnd,backHomeKey)
             
             #判斷隱藏遊戲視窗
             x,y,width,height = getWindow_W_H(hwnd)
@@ -282,7 +266,7 @@ class PlayerThread(Thread):
         output += msg
         print(output)
         
-    def questRun(self,hwnd,backHomeKey):
+    def bossQuestRun(self,hwnd,backHomeKey):
         print('進入副本腳本，先按回捲。') 
         self.pressKey(hwnd,backHomeKey)        
         print('避免村莊lag，等個 5sec')
@@ -303,3 +287,28 @@ class PlayerThread(Thread):
                 break
             
         print('開始打王！結束腳本')
+
+    def isRunBoss(self):
+        now = datetime.now()
+
+        m = int(now.strftime('%M'))
+        s = int(now.strftime('%S'))
+        weekDay = now.weekday()
+        runBoss = 0
+        
+        if(m == (60 - self.beforeMinutes) and 5 <= s <= 10):
+            nextBossTimeStr = (now + timedelta(minutes = self.beforeMinutes)).strftime('%H:%M')           
+            try:
+                idx = self.tkObj.bossTimeList.index(nextBossTimeStr) #檢查是否為世界王時段
+                runBoss = self.tkObj.bossTimeVariable[idx].get() #檢查checkbox
+                
+                #週日19:00、20:00場次沒開
+                if idx in [2,3] and weekDay == 6:
+                    runBoss = 0
+            except:
+                    runBoss = 0
+        
+        if runBoss == 0:
+            return False
+        else:
+            return True

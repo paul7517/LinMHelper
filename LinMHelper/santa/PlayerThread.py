@@ -79,8 +79,9 @@ class PlayerThread(Thread):
             now = datetime.now()
             
             #判斷是不是世界王時段，若是，執行世界王腳本
-            if self.isRunBoss():
-                self.bossQuestRun(hwnd,wName,backHomeKey)
+            runBoss , weekDay , idx = self.isRunBoss()
+            if runBoss:
+                self.bossQuestRun(hwnd,wName,backHomeKey,weekDay,idx)
             
             #判斷隱藏遊戲視窗要叫出或是隱藏
             self.hideOrShowWindow(hwnd)
@@ -286,14 +287,19 @@ class PlayerThread(Thread):
         output += msg
         print(output)
         
-    def bossQuestRun(self,hwnd,wName,backHomeKey):
+    def bossQuestRun(self,hwnd,wName,backHomeKey,weekDay,idx):
         print('進入副本腳本，先按回捲。') 
         self.pressKey(hwnd,wName,backHomeKey)        
         print('避免村莊lag，等個 5sec')
         sleep(5)
         
         print('點擊世界王按鈕(請設為0熱鍵)')
-        self.pressKey(hwnd,wName, LinMKeySet.bossQuest)
+        #週一~週四及週六晚上10點的場次(底比斯) 及 週五晚上9點的場次(拉斯塔巴德hot-time)
+        #按鈕位置左移80 px
+        if (weekDay in [0,1,2,3,5] and idx == 5) or (weekDay == 4 and idx == 4):
+            self.pressKey(hwnd,wName, LinMKeySet.bossQuest2)
+        else:
+            self.pressKey(hwnd,wName, LinMKeySet.bossQuest)
         sleep(2)
         print('點擊確認')
         self.pressKey(hwnd,wName, LinMKeySet.key2)
@@ -329,9 +335,9 @@ class PlayerThread(Thread):
                     runBoss = 0
         
         if runBoss == 0:
-            return False
+            return False , None , None
         else:
-            return True
+            return True , weekDay , idx
     
     #判斷遊戲視窗要隱藏或顯示
     def hideOrShowWindow(self,hwnd):

@@ -18,6 +18,7 @@ class LinMKeySet(Enum):
 
     #右上方選單鍵
     bossQuest = [850 , 40]
+    bossQuest2 = [780 , 40] #底比斯圖示出現時，世界王按鈕的位置
     upperShop = [930 , 40]
     upperitem = [1010 , 40]
     upperSkill = [1080 , 40]

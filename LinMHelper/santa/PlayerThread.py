@@ -8,9 +8,10 @@ from santa.ImageUtils import detectTeamEnabled, detectItemSkillPanelOpened, \
 from threading import Thread
 from configparser import ConfigParser
 from time import sleep,strftime
-from os import mkdir,path
+from os import mkdir,path,popen
 from winsound import Beep
 from calendar import weekday
+from santa.Lib32.keyPos import LinMKeySet
 
 class PlayerThread(Thread):
     # 取得config 檔
@@ -79,24 +80,15 @@ class PlayerThread(Thread):
             
             #判斷是不是世界王時段，若是，執行世界王腳本
             if self.isRunBoss():
-                self.bossQuestRun(hwnd,backHomeKey)
+                self.bossQuestRun(hwnd,wName,backHomeKey)
             
-            #判斷隱藏遊戲視窗
-            x,y,width,height = getWindow_W_H(hwnd)
-            #print(x,',',y)
-            isHideWindow = self.tkObj.hideWindowVar.get()
-            if(isHideWindow == 1 and x <= 8000 and y <= 8000):
-                #設定X、Y至 > 10,000
-                setWindowPosition(hwnd, x+10000, y+10000, width, height)
-            elif isHideWindow == 0 and x >= 8000 and y>=8000:
-                #設定X、Y至 < 10,000
-                setWindowPosition(hwnd, x-10000, y-10000, width, height)
+            #判斷隱藏遊戲視窗要叫出或是隱藏
+            self.hideOrShowWindow(hwnd)
                 
             # 取得視窗的截圖
             self.img = getWindow_Img(hwnd)
             if(self.img == None):
-                continue
-                
+                continue                
             #self.saveImage(self.img, wName, 'debug')
             
             hp = -1
@@ -104,7 +96,7 @@ class PlayerThread(Thread):
             infoToLabel = ""
             isTeamEnabled , isGrey = detectTeamEnabled(self.img)
             isRightPanelOpened = detectItemSkillPanelOpened(self.img)
-            # print('PanelOpened = %r' %isRightPanelOpened)            
+            # print('PanelOpened = %r' %isRightPanelOpened)  
             
             if isGrey > 0:
                 if isGrey == 2: #情境:對話確認視窗    
@@ -112,15 +104,16 @@ class PlayerThread(Thread):
                 elif isGrey == 1:#情況: 對話中，但無確認視窗
                     self.doBeep(1)
                     self.logToConsole(f'[Beta][{wName}]可能是任務完成，無確認視窗按任意鍵繼續(預設攻擊鍵)。')
-                    self.pressKey(hwnd,majorAttackKey)
+                    self.pressKey(hwnd,wName,majorAttackKey)
 
                 if darkCnt == 5:
                     self.doBeep(1)
                     darkCnt = 0
                     self.logToConsole(f'[Beta][{wName}]可能是任務完成，並且在確認視窗(按確認鈕)。')      
-                    self.pressKey(hwnd,'y')               
+                    self.pressKey(hwnd,wName,LinMKeySet.acceptQuest)               
                 
-                sleep(2)
+                #實際上大概是2秒(加上pressKey約1秒)
+                sleepTime = 2
                 #迴圈重來
                 continue
             else:
@@ -154,14 +147,14 @@ class PlayerThread(Thread):
                 infoToLabel += "戰鬥狀態:%r," % isAttack
                 
                 if not isAttack:
-                    notAttackCnt+=1
+                    notAttackCnt += 1
                 else:
                     notAttackCnt = 0
                     notAttackAlertTimes=30
                 
                 # 血量夠低且距離上次回捲超過30秒才飛
                 if (hp < hpBackHome and hp > 0 and (now - lastHomeTeleport).seconds >= 30): 
-                    self.pressKey(hwnd,backHomeKey)
+                    self.pressKey(hwnd,wName,backHomeKey)
                     self.saveImage(self.img, wName, "血低");  # 可能是被殺，存圖。
                     infoToLabel += "點擊回捲。"
                     
@@ -170,11 +163,12 @@ class PlayerThread(Thread):
                     
                     lastHomeTeleport = now
                     self.doBeep(5) # 回村響5聲
+
                     sleepTime = 1
                 elif( isAttacked and (now - lastRndTeleport).seconds >= 3 and (now - lastHomeTeleport).seconds >= 5):
                     # 被打，點瞬捲(3秒內不連飛，5秒內點過回捲也不飛，避免回村後再飛一次)
                     # 當組隊情況時teamPosition > 0 (假定人顧在旁邊)，被打不自動飛
-                    self.pressKey(hwnd,teleportKey)
+                    self.pressKey(hwnd,wName,teleportKey)
                     self.saveImage(self.img, wName, "被打");
                     infoToLabel += "被打囉。"
                     
@@ -183,23 +177,22 @@ class PlayerThread(Thread):
                     
                     lastRndTeleport = now
                     self.doBeep(3); # 被打響3聲
-                    sleepTime = 0.1
+                    sleepTime = 1
                 elif(hp < hpCure and hp > 0 and mp > 5):
-                    #sleepTime = 0.9
-                    sleepTime = 0.3
-                    self.pressKey(hwnd,cureKey)
+                    sleepTime = 1
+                    self.pressKey(hwnd,wName,cureKey)
                     infoToLabel += "施放治癒魔法。"
                 elif(mp >= mpProtect and isAttack):
-                    sleepTime = 0.9
-                    self.pressKey(hwnd,majorAttackKey)
+                    sleepTime = 1
+                    self.pressKey(hwnd,wName,majorAttackKey)
                     infoToLabel += "施放攻擊魔法。"
                 elif(not isAttack and mp < 90 and role == 'ELF' and mp >= 0):
                     sleepTime = 2
-                    self.pressKey(hwnd,transHpKey)
+                    self.pressKey(hwnd,wName,transHpKey)
                     infoToLabel += "MP<90%，施放魂體轉換。"
                 elif(mp < mpProtect and mp < 90 and hp >= mpTransHP):
                     sleepTime = 2
-                    self.pressKey(hwnd,transHpKey)
+                    self.pressKey(hwnd,wName,transHpKey)
                     infoToLabel += "施放魂體轉換。"
                 else:
                     infoToLabel += "啥也不做。"
@@ -247,10 +240,37 @@ class PlayerThread(Thread):
         nowStr = strftime('%Y%m%d-%H-%M-%S.png')
         imgName = 'LinMOut/' + wName + "_" + imgType + '_' + nowStr
         img.save(imgName, "PNG")
-        
-    def pressKey(self,hwnd,key):
-        postMessage(hwnd, key)
+
+       
+    def pressKey(self,hwnd,wName,key):
+        #postMessage(hwnd, key)
+        self.adb_tap(wName , key)
         #self.tkObj.q.put((hwnd,key))
+    
+    
+    def adb_tap(self,wName,pos):
+        keyDict = {'1' : LinMKeySet.key1,
+            '2' : LinMKeySet.key2,
+            '3' : LinMKeySet.key3,
+            '4' : LinMKeySet.key4,
+            '5' : LinMKeySet.key5,
+            '6' : LinMKeySet.key6,
+            '7' : LinMKeySet.key7,
+            '8' : LinMKeySet.key8}
+
+        if not isinstance(pos , LinMKeySet) and pos in keyDict:
+            pos = keyDict[pos]
+
+        if isinstance(pos , LinMKeySet) and pos is not None:
+            x , y = pos.value[0] , pos.value[1]
+            execCmd = f'd: & cd "D:\\Program Files\\Nox\\bin\\" & .\\NoxConsole.exe adb -name:{wName} -command:"shell input tap {x} {y}"' 
+            #print(f'exeCmd={execCmd}')
+            #subprocess.call(execCmd)
+            #subprocess2.call(execCmd)
+            popen(execCmd)
+            #system(execCmd)
+        else:
+            print(f'adb_tap input error {pos}')
     
     def doBeep(self , cnt):
         t=Thread(target=self.beep,args=(cnt,))
@@ -266,24 +286,24 @@ class PlayerThread(Thread):
         output += msg
         print(output)
         
-    def bossQuestRun(self,hwnd,backHomeKey):
+    def bossQuestRun(self,hwnd,wName,backHomeKey):
         print('進入副本腳本，先按回捲。') 
-        self.pressKey(hwnd,backHomeKey)        
+        self.pressKey(hwnd,wName,backHomeKey)        
         print('避免村莊lag，等個 5sec')
         sleep(5)
         
         print('點擊世界王按鈕(請設為0熱鍵)')
-        self.pressKey(hwnd, '0')
+        self.pressKey(hwnd,wName, LinMKeySet.bossQuest)
         sleep(2)
         print('點擊確認')
-        self.pressKey(hwnd, '2')
+        self.pressKey(hwnd,wName, LinMKeySet.key2)
         
         print('等待世界王開始')
         while(True):
             sleep(10)
             min =int(datetime.now().strftime('%M'))
             if(min == 0):
-                self.pressKey(hwnd, 'z')
+                self.pressKey(hwnd,wName,LinMKeySet.autoBtn)
                 break
             
         print('開始打王！結束腳本')
@@ -312,3 +332,17 @@ class PlayerThread(Thread):
             return False
         else:
             return True
+    
+    #判斷遊戲視窗要隱藏或顯示
+    def hideOrShowWindow(self,hwnd):
+        x,y,width,height = getWindow_W_H(hwnd)
+        #print(x,',',y)
+        isHideWindow = self.tkObj.hideWindowVar.get()
+        if(isHideWindow == 1 and x <= 8000 and y <= 8000):
+            #設定X、Y至 > 10,000
+            setWindowPosition(hwnd, x+10000, y+10000, width, height)
+        elif isHideWindow == 0 and x >= 8000 and y>=8000:
+            #設定X、Y至 < 10,000
+            setWindowPosition(hwnd, x-10000, y-10000, width, height)
+
+    

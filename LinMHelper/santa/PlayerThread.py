@@ -265,11 +265,18 @@ class PlayerThread(Thread):
         if isinstance(pos , LinMKeySet) and pos is not None:
             x , y = pos.value[0] , pos.value[1]
             execCmd = f'd: & cd "D:\\Program Files\\Nox\\bin\\" & .\\NoxConsole.exe adb -name:{wName} -command:"shell input tap {x} {y}"' 
-            #print(f'exeCmd={execCmd}')
-            #subprocess.call(execCmd)
-            #subprocess2.call(execCmd)
-            popen(execCmd)
-            #system(execCmd)
+            p = popen(execCmd)
+
+            rst = p.readline()
+            if rst[0:5] == 'error':
+                print(f'error:{rst}')
+                
+                ipAddr = rst.split("'")[1]
+                print(f'reconnect to {ipAddr}')                
+                reconnectCmd = f'd: & cd "D:\\Program Files\\Nox\\bin\\" & .\\nox_adb.exe connect {ipAddr}'
+                p = popen(reconnectCmd)
+                print(p.readline())
+
         else:
             print(f'adb_tap input error {pos}')
     

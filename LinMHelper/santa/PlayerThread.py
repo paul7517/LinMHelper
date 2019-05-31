@@ -82,6 +82,8 @@ class PlayerThread(Thread):
             runBoss , weekDay , idx = self.isRunBoss()
             if runBoss:
                 self.bossQuestRun(hwnd,wName,backHomeKey,weekDay,idx)
+                #10分鐘內都不再按回捲，避免世界王副本被暈到誤飛
+                lastHomeTeleport = now + timedelta(minutes = 10)
             
             #判斷隱藏遊戲視窗要叫出或是隱藏
             self.hideOrShowWindow(hwnd)
@@ -180,19 +182,19 @@ class PlayerThread(Thread):
                     self.doBeep(3); # 被打響3聲
                     sleepTime = 1
                 elif(hp < hpCure and hp > 0 and mp > 5):
-                    sleepTime = 1
+                    sleepTime = 0 #加上執行延遲0.6秒
                     self.pressKey(hwnd,wName,cureKey)
                     infoToLabel += "施放治癒魔法。"
                 elif(mp >= mpProtect and isAttack):
-                    sleepTime = 1
+                    sleepTime = 0.4 #加上執行延遲0.6秒
                     self.pressKey(hwnd,wName,majorAttackKey)
                     infoToLabel += "施放攻擊魔法。"
                 elif(not isAttack and mp < 90 and role == 'ELF' and mp >= 0):
-                    sleepTime = 2
+                    sleepTime = 1.4 #加上執行延遲0.6秒
                     self.pressKey(hwnd,wName,transHpKey)
                     infoToLabel += "MP<90%，施放魂體轉換。"
                 elif(mp < mpProtect and mp < 90 and hp >= mpTransHP):
-                    sleepTime = 2
+                    sleepTime = 1.4 #加上執行延遲0.6秒
                     self.pressKey(hwnd,wName,transHpKey)
                     infoToLabel += "施放魂體轉換。"
                 else:
@@ -301,7 +303,7 @@ class PlayerThread(Thread):
         sleep(5)
         
         print('點擊世界王按鈕(請設為0熱鍵)')
-        #週一~週四及週六晚上10點的場次(底比斯) 及 週五晚上9點的場次(拉斯塔巴德hot-time)
+        #週一~週四及週六晚上10點的場次(底比斯) 及 週五、六晚上9點的場次(拉斯塔巴德hot-time)
         #按鈕位置左移80 px
         if (weekDay in [0,1,2,3,5] and idx == 5) or (weekDay == 4 and idx == 4):
             self.pressKey(hwnd,wName, LinMKeySet.bossQuest2)

@@ -305,7 +305,8 @@ class PlayerThread(Thread):
         print('點擊世界王按鈕(請設為0熱鍵)')
         #週一~週四及週六晚上10點的場次(底比斯) 及 週五、六晚上9點的場次(拉斯塔巴德hot-time)
         #按鈕位置左移80 px
-        if (weekDay in [0,1,2,3,5] and idx == 5) or (weekDay == 4 and idx == 4):
+        #if (weekDay in [0,1,2,3,5] and idx == 5) or (weekDay == 4 and idx == 4):
+        if weekDay in [0,1,2,3,4,5] and idx == 5:
             self.pressKey(hwnd,wName, LinMKeySet.bossQuest2)
         else:
             self.pressKey(hwnd,wName, LinMKeySet.bossQuest)

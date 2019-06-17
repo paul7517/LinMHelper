@@ -20,3 +20,12 @@ NoxConsole.exe adb -name:NoxPlayer  -command:" shell input tap 20 20"
 
 NoxConsole.exe getprop -name:NoxPlayer -key:"nox.vbox_graph_mode"
 1280x720-16
+
+PS D:\Program Files\Nox\bin> .\adb.exe kill-server
+PS D:\Program Files\Nox\bin> .\adb.exe start-server
+PS D:\Program Files\Nox\bin> .\adb.exe devices
+List of devices attached
+
+PS D:\Program Files\Nox\bin> .\adb.exe connect 127.0.0.1:62001
+connected to 127.0.0.1:62001
+PS D:\Program Files\Nox\bin> .\adb.exe connect 127.0.0.1:62052

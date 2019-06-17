@@ -81,7 +81,9 @@ def detectHPPercent(img,teamPosition,rgbValue):
             cnt+=1
         #elif(g - 20 > r and g-20 > b and r < 80 and b < 55):
         #elif(g - 20 >= r and g-20 >= b and r < 100 and b < 75):
-        elif(g + 20 >= r and g-20 >= b and r < 100 and b < 75):
+        #背景是藍色的時候可能造成G = B或是B略大於G
+        #elif(g + 20 >= r and g >= b + 20 and r < 100 and b < 75):
+        elif(g + 20 >= r and g >= b - 15 and r < 100 and b < 75):
             poisonCnt += 1
             
     

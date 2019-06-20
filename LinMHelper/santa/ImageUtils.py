@@ -54,10 +54,10 @@ def detectItemSkillPanelOpened(img):
 #判斷血條
 def detectHPPercent(img,teamPosition,rgbValue):
     cnt = 0
-    poisonCnt = 0
+    posionCnt = 0
     
     debug = False
-    poisonOut = ''
+    posionOut = ''
     
     intX1 = int(5.7 * img.width / 100)
     intX2 = int(14.1 * img.width / 100)
@@ -75,7 +75,7 @@ def detectHPPercent(img,teamPosition,rgbValue):
         rgb = getPixel(img, x, y, rgbValue)
         r = rgb[0]; g=rgb[1]; b=rgb[2]
         #outStr += '%d , %d , %d\n'  % (rgb[0],rgb[1],rgb[2]) 
-        if(debug): poisonOut += 'R=%d,G=%d,B=%d\n'  % (r,g,b,)
+        if(debug): posionOut += 'R=%d,G=%d,B=%d\n'  % (r,g,b,)
         
         if(comparePointRGB(img, x, y, (137,205), (0,15),(0,15),rgbValue)):
             cnt+=1
@@ -83,19 +83,21 @@ def detectHPPercent(img,teamPosition,rgbValue):
         #elif(g - 20 >= r and g-20 >= b and r < 100 and b < 75):
         #背景是藍色的時候可能造成G = B或是B略大於G
         #elif(g + 20 >= r and g >= b + 20 and r < 100 and b < 75):
-        elif(g + 20 >= r and g >= b - 15 and r < 100 and b < 75):
-            poisonCnt += 1
+        #elif g >= r - 10 and g >= b - 10 and r < 100 and b < 75 and g > 30:
+        elif (   (g >= r + 20 and g >= b-10) or (g >= b + 20 and g >= r - 10)   ) and r < 100 and b < 75 and g > 30:
+            posionCnt += 1
             
-    
-    if(cnt == 0):  cnt = poisonCnt
+    isPosion = (cnt == 0 and posionCnt > 0)
+    if isPosion:  
+        cnt = posionCnt
     
     hpPercent = int(cnt / (intX2-intX1) * 100)       
     
     #中毒的時候還是會有誤判的時候，試著把誤判的情況印出來。
-    if(debug and hpPercent < 50 and cnt == poisonCnt):
-        print(poisonOut) 
+    if(debug and hpPercent < 50 and cnt == posionCnt):
+        print(posionOut) 
 
-    return hpPercent
+    return hpPercent , isPosion
 
 #判斷HP條
 def detectMPPercent(img,teamPosition,rgbValue):

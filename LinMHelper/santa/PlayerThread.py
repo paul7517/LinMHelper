@@ -96,6 +96,7 @@ class PlayerThread(Thread):
             
             hp = -1
             mp = -1
+            isPosion = False
             infoToLabel = ""
             isTeamEnabled , isGrey = detectTeamEnabled(self.img)
             isRightPanelOpened = detectItemSkillPanelOpened(self.img)
@@ -138,13 +139,16 @@ class PlayerThread(Thread):
                 #self.doBeep(1)
             else:
                 if(detectTeamPositionAvalible(self.img, teamPosition)):
-                    hp = detectHPPercent(self.img, teamPosition,255)
+                    hp , isPosion = detectHPPercent(self.img, teamPosition,255)
                     mp = detectMPPercent(self.img, teamPosition,255)
                 elif(detectTeamPositionAvalible(self.img, 0)):                    
-                    hp = detectHPPercent(self.img, 0,255)
+                    hp , isPosion = detectHPPercent(self.img, 0,255)
                     mp = detectMPPercent(self.img, 0,255)
                 
-                    
+                #debug use
+                if isPosion:
+                    self.saveImage(self.img , wName , "中毒")
+
                 isAttack = detectIsAttack(self.img)
                 isAttacked = detectIsAttacked(self.img)
                 infoToLabel += "戰鬥狀態:%r," % isAttack

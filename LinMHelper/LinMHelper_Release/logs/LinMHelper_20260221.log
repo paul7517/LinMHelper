@@ -1,7 +1,0 @@
-[2026/02/21 16:18:58] INFO  [MainThread] Thread-0 初始化完成
-[2026/02/21 16:18:58] INFO  [MainThread] Thread-1 初始化完成
-[2026/02/21 16:18:58] INFO  [MainThread] Thread-2 初始化完成
-[2026/02/21 16:18:58] INFO  [MainThread] Thread-3 初始化完成
-[2026/02/21 16:19:02] INFO  [MainThread] Thread-0 初始化完成
-[2026/02/21 16:19:02] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
-[2026/02/21 16:19:05] INFO  [Player-0] Thread-0 已停止

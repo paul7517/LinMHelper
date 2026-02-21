@@ -16,7 +16,7 @@ def detectTeamEnabled(img):
     
     # 嘗試模板比對
     if detector.has_template('team_enabled'):
-        matched, conf, loc = detector.match_template(img, 'team_enabled', threshold=0.75)
+        matched, conf, loc = detector.match_template(img, 'team_enabled', threshold=0.65)
         return matched, 0
     
     # fallback: 像素偵測

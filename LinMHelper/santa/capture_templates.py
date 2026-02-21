@@ -10,7 +10,9 @@ import sys
 import os
 import cv2
 import numpy as np
+import numpy as np
 from PIL import Image
+from santa.roi_config import ROI
 
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), 'templates')
 
@@ -21,7 +23,9 @@ TEMPLATES = [
         'desc': '請框選「組隊列表」左側的白色直條區域。\n'
                 '這是畫面左側顯示隊伍成員血條的那一整塊 UI。\n'
                 '確保組隊 UI 有顯示時再擷取。',
-        'hint_x': 5, 'hint_y': 20, 'hint_w': 25, 'hint_h': 10,
+        'hint_x': ROI.Team.cp1_x, 'hint_y': ROI.Team.cp1_y1, 
+        'hint_w': ROI.Team.cp2_x - ROI.Team.cp1_x, 
+        'hint_h': ROI.Team.cp1_y2 - ROI.Team.cp1_y1,
         'color': (0, 255, 0),
     },
     {
@@ -30,7 +34,8 @@ TEMPLATES = [
         'desc': '請框選右側「道具」或「技能」面板展開時的特徵區域。\n'
                 '先打開道具或技能面板再擷取。\n'
                 '建議擷取面板邊框或標題列的一小塊。',
-        'hint_x': 65, 'hint_y': 18, 'hint_w': 10, 'hint_h': 45,
+        'hint_x': ROI.Panel.x, 'hint_y': ROI.Panel.y1, 
+        'hint_w': 20, 'hint_h': ROI.Panel.y2 - ROI.Panel.y1,
         'color': (255, 165, 0),
     },
     {
@@ -39,7 +44,8 @@ TEMPLATES = [
         'desc': '請框選角色「正在攻擊」時才會出現的 UI 元素。\n'
                 '通常在畫面右下方，戰鬥時會出現紅色劍/攻擊圖示。\n'
                 '確保角色正在戰鬥中再擷取。',
-        'hint_x': 80, 'hint_y': 65, 'hint_w': 10, 'hint_h': 10,
+        'hint_x': ROI.Attack.x1, 'hint_y': ROI.Attack.y, 
+        'hint_w': ROI.Attack.x2 - ROI.Attack.x1, 'hint_h': 5,
         'color': (0, 0, 255),
     },
     {
@@ -48,7 +54,9 @@ TEMPLATES = [
         'desc': '請框選角色「被其他玩家攻擊」時才會出現的特徵。\n'
                 '通常畫面邊緣會閃紅光或出現 PK 標記。\n'
                 '如果無法重現此情況，可按 ESC 跳過（使用像素偵測）。',
-        'hint_x': 90, 'hint_y': 73, 'hint_w': 6, 'hint_h': 5,
+        'hint_x': ROI.Attacked.area1_x1, 'hint_y': ROI.Attacked.area1_y0, 
+        'hint_w': ROI.Attacked.area1_x2 - ROI.Attacked.area1_x1,
+        'hint_h': ROI.Attacked.area1_y_range,
         'color': (128, 0, 255),
     },
 ]

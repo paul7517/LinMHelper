@@ -143,3 +143,847 @@
 [2026/02/21 20:23:27] INFO  [Player-3] 被打囉。
 [2026/02/21 20:23:28] INFO  [Player-3] 被打囉。
 [2026/02/21 20:29:21] INFO  [Player-3] 被打囉。
+[2026/02/21 20:32:38] INFO  [Player-2] 被打囉。
+[2026/02/21 20:32:41] INFO  [Player-3] 被打囉。
+[2026/02/21 20:32:54] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 20:32:54] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 20:32:54] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 20:32:54] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 20:32:57] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 20:32:57] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 20:32:58] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 20:32:58] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 20:32:59] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 20:32:59] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 20:33:04] INFO  [Player-3] 被打囉。
+[2026/02/21 20:33:05] INFO  [Player-3] 被打囉。
+[2026/02/21 20:33:05] INFO  [Player-3] 被打囉。
+[2026/02/21 20:33:46] INFO  [Player-2] backHome
+[2026/02/21 20:33:46] INFO  [Player-2] 戰鬥狀態:False,點擊回捲。
+[2026/02/21 20:33:56] INFO  [Player-2] backHome
+[2026/02/21 20:33:56] INFO  [Player-2] 戰鬥狀態:False,點擊回捲。
+[2026/02/21 20:34:01] INFO  [Player-2] backHome
+[2026/02/21 20:34:01] INFO  [Player-2] 戰鬥狀態:False,點擊回捲。
+[2026/02/21 20:34:01] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 20:34:23] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 20:34:23] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 20:34:23] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 20:34:23] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 20:35:43] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 20:35:43] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 20:35:44] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 20:35:44] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 20:35:44] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 20:35:44] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 20:35:55] INFO  [Player-3] 被打囉。
+[2026/02/21 20:36:45] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 20:36:46] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 20:36:46] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 20:36:53] INFO  [Player-2] 被打囉。
+[2026/02/21 20:36:58] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 20:37:01] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 20:37:01] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 20:41:15] INFO  [Player-3] 被打囉。
+[2026/02/21 20:43:52] INFO  [Player-2] 被打囉。
+[2026/02/21 20:45:51] INFO  [Player-3] 被打囉。
+[2026/02/21 20:53:08] INFO  [Player-3] 被打囉。
+[2026/02/21 20:55:05] INFO  [Player-2] 進入副本腳本，先按回捲
+[2026/02/21 20:55:05] INFO  [Player-2] 避免村莊lag，等個 10sec + 亂數
+[2026/02/21 20:55:05] INFO  [Player-3] 進入副本腳本，先按回捲
+[2026/02/21 20:55:05] INFO  [Player-3] 避免村莊lag，等個 10sec + 亂數
+[2026/02/21 20:55:05] INFO  [Player-0] 進入副本腳本，先按回捲
+[2026/02/21 20:55:06] INFO  [Player-0] 避免村莊lag，等個 10sec + 亂數
+[2026/02/21 20:55:18] INFO  [Player-2] 點擊確認
+[2026/02/21 20:55:18] INFO  [Player-2] 等待世界王開始
+[2026/02/21 20:55:19] INFO  [Player-3] 點擊確認
+[2026/02/21 20:55:20] INFO  [Player-3] 等待世界王開始
+[2026/02/21 20:55:27] INFO  [Player-0] 點擊確認
+[2026/02/21 20:55:27] INFO  [Player-0] 等待世界王開始
+[2026/02/21 20:57:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:57:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:58:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 20:59:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:00:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:01:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:02:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:03:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:04:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:05:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:06:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:07:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:08:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:09:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:10:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:11:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:12:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:30] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:52] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:54] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:56] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:13:58] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:00] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:02] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:04] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:06] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:08] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:10] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:12] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:14] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:16] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:18] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:20] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:22] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:24] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:26] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:28] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:31] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:33] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:35] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:37] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:39] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:41] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:43] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:45] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:47] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:49] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:51] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:53] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:55] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:57] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:14:59] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:01] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:03] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:05] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:07] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:09] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:11] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:13] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:15] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:17] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:19] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:21] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:23] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:25] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:27] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:29] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:31] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:33] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:35] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:37] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:39] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:41] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:43] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:45] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:47] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:49] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:51] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:53] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:55] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:57] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:15:59] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:01] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:03] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:05] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:07] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:09] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:11] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:13] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:15] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:17] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:19] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:21] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:23] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:25] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:27] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:29] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:31] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:33] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:35] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:37] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:39] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:41] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:43] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:45] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:47] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:49] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:51] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:53] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:55] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:57] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:16:59] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:01] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:03] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:05] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:07] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:09] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:11] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:13] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:15] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:17] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:19] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:21] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:23] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:25] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:27] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:29] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:31] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:33] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:35] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:37] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:39] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:41] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:43] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:45] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:47] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:49] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:51] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:53] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:55] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:57] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:17:59] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:01] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:03] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:05] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:07] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:09] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:11] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:13] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:15] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:17] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:19] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:21] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:23] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:25] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:27] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:29] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:31] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:33] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:35] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:37] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:39] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:41] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:43] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:45] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:47] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:49] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:18:52] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:18:52] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 21:18:52] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:18:52] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:19:08] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:19:08] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 21:19:08] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:19:08] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 21:19:09] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:19:09] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 21:19:18] INFO  [Player-2] 被打囉。
+[2026/02/21 21:19:24] INFO  [Player-2] 被打囉。
+[2026/02/21 21:19:25] INFO  [Player-0] 被打囉。
+[2026/02/21 21:19:39] INFO  [Player-2] 被打囉。
+[2026/02/21 21:19:43] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 21:22:25] INFO  [Player-0] Thread-0 已停止
+[2026/02/21 21:22:26] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:22:26] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 21:22:33] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:22:33] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 21:22:53] INFO  [Player-0] Thread-0 已停止
+[2026/02/21 21:22:54] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:22:54] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 21:23:15] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:17] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:19] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:21] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:23] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:25] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:27] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:29] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:31] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:33] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:35] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:37] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:39] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:41] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:43] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:45] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:47] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:49] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:51] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:53] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:55] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:57] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:23:59] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:24:01] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:24:39] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:24:39] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 21:24:39] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:24:39] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:24:55] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:24:55] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 21:24:57] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:24:57] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 21:24:58] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:24:58] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 21:26:17] INFO  [Player-3] 被打囉。
+[2026/02/21 21:27:49] INFO  [Player-2] 被打囉。
+[2026/02/21 21:28:51] INFO  [Player-3] 被打囉。
+[2026/02/21 21:28:59] INFO  [Player-2] 被打囉。
+[2026/02/21 21:30:50] INFO  [Player-0] 被打囉。
+[2026/02/21 21:30:56] INFO  [Player-0] 被打囉。
+[2026/02/21 21:30:59] INFO  [Player-0] 被打囉。
+[2026/02/21 21:31:05] INFO  [Player-0] 被打囉。
+[2026/02/21 21:31:07] INFO  [Player-0] 被打囉。
+[2026/02/21 21:32:42] INFO  [Player-2] 被打囉。
+[2026/02/21 21:34:11] INFO  [Player-2] 被打囉。
+[2026/02/21 21:34:32] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:34] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:36] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:38] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:40] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:42] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:44] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:46] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:48] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:50] INFO  [MainThread] 正在等待Thread-0停止。
+[2026/02/21 21:34:52] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:34:52] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 21:34:52] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:34:52] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:34:54] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:34:54] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 21:34:57] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:34:57] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 21:34:57] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:34:57] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 21:35:24] INFO  [Player-3] 被打囉。
+[2026/02/21 21:36:24] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 21:36:25] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:36:25] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 21:36:34] INFO  [Player-3] Thread-3 已停止
+[2026/02/21 21:36:35] INFO  [Player-0] Thread-0 已停止
+[2026/02/21 21:36:46] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:36:46] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 21:36:46] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:36:46] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 21:39:19] INFO  [Player-2] 被打囉。
+[2026/02/21 21:39:20] INFO  [Player-2] 被打囉。
+[2026/02/21 21:40:31] INFO  [Player-2] 被打囉。
+[2026/02/21 21:41:40] INFO  [Player-3] 被打囉。
+[2026/02/21 21:42:37] INFO  [Player-3] 被打囉。
+[2026/02/21 21:42:41] INFO  [Player-3] 被打囉。
+[2026/02/21 21:55:27] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:55:27] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 21:55:27] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:55:27] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:55:32] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:55:32] INFO  [Player-0] Thread-0: wName=wsh9, HWND=592872, profile=妖精.ini
+[2026/02/21 21:55:33] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:55:33] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 21:55:34] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:55:34] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 21:56:06] INFO  [Player-0] 被打囉。
+[2026/02/21 21:56:35] INFO  [Player-2] 被打囉。
+[2026/02/21 21:57:15] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:57:15] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 21:57:15] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:57:15] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:57:21] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:57:21] INFO  [Player-0] Thread-0: wName=wsh9, HWND=592872, profile=妖精.ini
+[2026/02/21 21:57:22] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 21:57:22] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 21:57:22] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 21:57:22] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 21:58:09] INFO  [Player-0] Thread-0 已停止
+[2026/02/21 21:58:10] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 21:58:10] INFO  [Player-0] Thread-0: wName=wsh9, HWND=592872, profile=妖精.ini
+[2026/02/21 22:01:16] INFO  [Player-3] 被打囉。
+[2026/02/21 22:01:46] INFO  [Player-3] 被打囉。
+[2026/02/21 22:02:16] INFO  [Player-3] 被打囉。
+[2026/02/21 22:13:47] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 22:13:47] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 22:13:47] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 22:13:47] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 22:13:48] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 22:13:48] INFO  [Player-0] Thread-0: wName=wsh9, HWND=592872, profile=妖精.ini
+[2026/02/21 22:13:49] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 22:13:49] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 22:13:50] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 22:13:50] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 22:17:10] INFO  [Player-2] 被打囉。

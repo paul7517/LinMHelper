@@ -22,7 +22,30 @@ class TemplateDetector:
     def __init__(self, template_dir=TEMPLATE_DIR):
         self.template_dir = template_dir
         self._cache = {}  # 模板快取 {name: numpy_array}
+        self.orig_screen_size = None  # 記錄截取模板時的視窗解析度 (w, h)
         os.makedirs(template_dir, exist_ok=True)
+        self._load_orig_screen_size()
+    
+    def _load_orig_screen_size(self):
+        full_path = os.path.join(self.template_dir, '_full_screenshot.png')
+        if os.path.exists(full_path):
+            full = cv2.imread(full_path)
+            if full is not None:
+                self.orig_screen_size = (full.shape[1], full.shape[0])
+                
+    def _get_scaled_gray_template(self, template, curr_w, curr_h):
+        gray_tmpl = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
+        if self.orig_screen_size is not None:
+            orig_w, orig_h = self.orig_screen_size
+            if abs(curr_w - orig_w) > 2 or abs(curr_h - orig_h) > 2:
+                scale_w = curr_w / orig_w
+                scale_h = curr_h / orig_h
+                new_w = max(1, int(gray_tmpl.shape[1] * scale_w))
+                new_h = max(1, int(gray_tmpl.shape[0] * scale_h))
+                new_w = min(new_w, curr_w)
+                new_h = min(new_h, curr_h)
+                gray_tmpl = cv2.resize(gray_tmpl, (new_w, new_h), interpolation=cv2.INTER_AREA)
+        return gray_tmpl
     
     def _get_template_path(self, name):
         """取得模板檔案路徑"""
@@ -89,9 +112,10 @@ class TemplateDetector:
         if isinstance(img, Image.Image):
             img = self.pil_to_cv2(img)
         
-        # 灰階比對（更快、更穩定）
+        # 灰階及動態解析度縮放（確保不同大小的模擬器視窗也能比對成功）
         gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        gray_tmpl = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
+        curr_h, curr_w = gray_img.shape[:2]
+        gray_tmpl = self._get_scaled_gray_template(template, curr_w, curr_h)
         
         result = cv2.matchTemplate(gray_img, gray_tmpl, method)
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
@@ -124,8 +148,10 @@ class TemplateDetector:
         if isinstance(img, Image.Image):
             img = self.pil_to_cv2(img)
         
+        # 灰階及動態解析度縮放
         gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        gray_tmpl = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
+        curr_h, curr_w = gray_img.shape[:2]
+        gray_tmpl = self._get_scaled_gray_template(template, curr_w, curr_h)
         
         result = cv2.matchTemplate(gray_img, gray_tmpl, method)
         h, w = gray_tmpl.shape[:2]
@@ -174,6 +200,9 @@ class TemplateDetector:
         cropped = img.crop((x, y, x + w, y + h))
         path = self._get_template_path(name)
         cropped.save(path, 'PNG')
+        
+        # 更新截圖基準解析度
+        self._load_orig_screen_size()
         
         # 清除此模板的快取
         if name in self._cache:

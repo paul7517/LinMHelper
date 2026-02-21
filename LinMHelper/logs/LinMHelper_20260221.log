@@ -1,0 +1,145 @@
+[2026/02/21 15:16:01] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:16:01] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 15:16:01] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:16:01] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:16:06] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:16:06] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 15:16:09] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:16:09] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 15:16:10] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:16:10] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 15:17:21] INFO  [Player-2] 被打囉。
+[2026/02/21 15:23:02] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:23:02] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 15:23:02] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:23:02] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:23:09] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:23:09] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 15:23:15] INFO  [MainThread] 已停止所有 thread
+[2026/02/21 15:23:16] INFO  [Player-0] Thread-0 已停止
+[2026/02/21 15:26:08] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:26:08] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 15:26:08] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:26:08] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:26:14] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:26:14] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 15:26:55] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:26:55] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 15:26:58] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:26:58] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 15:27:02] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 15:27:02] WARNING [Player-1] Thread-1: 找不到視窗 [scdPlayer]
+[2026/02/21 15:27:02] WARNING [MainThread] Thread-1 意外終止，已自動更新狀態
+[2026/02/21 15:27:46] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:27:46] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 15:27:46] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:27:46] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:27:47] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 15:27:48] INFO  [Player-0] Thread-0 已停止
+[2026/02/21 15:27:48] INFO  [Player-3] Thread-3 已停止
+[2026/02/21 15:27:51] INFO  [MainThread] 已停止所有 thread
+[2026/02/21 15:27:53] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:27:53] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 15:27:54] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:27:54] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 15:27:54] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:27:54] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 15:33:20] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 15:33:20] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 15:33:20] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 15:33:20] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 15:34:22] INFO  [Player-2] 被打囉。
+[2026/02/21 15:34:32] INFO  [Player-2] 被打囉。
+[2026/02/21 15:35:19] INFO  [Player-0] 被打囉。
+[2026/02/21 15:47:55] INFO  [Player-2] 被打囉。
+[2026/02/21 15:47:59] INFO  [Player-2] 被打囉。
+[2026/02/21 15:57:35] INFO  [Player-0] 被打囉。
+[2026/02/21 15:58:41] INFO  [Player-0] 被打囉。
+[2026/02/21 16:02:41] INFO  [Player-2] 被打囉。
+[2026/02/21 16:05:09] INFO  [Player-3] Thread-3 已停止
+[2026/02/21 16:05:10] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 16:05:10] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 16:05:17] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 16:05:18] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 16:05:18] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 16:07:26] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 16:07:26] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 16:07:26] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 16:07:26] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 16:07:28] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 16:07:28] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 16:07:29] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 16:07:29] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 16:07:30] INFO  [MainThread] Thread-1 初始化完成
+[2026/02/21 16:07:30] WARNING [Player-1] Thread-1: 找不到視窗 [scdPlayer]
+[2026/02/21 16:07:30] WARNING [MainThread] Thread-1 意外終止，已自動更新狀態
+[2026/02/21 16:07:34] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 16:07:34] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 16:20:22] INFO  [Player-3] 被打囉。
+[2026/02/21 16:27:33] INFO  [Player-2] 被打囉。
+[2026/02/21 16:27:41] INFO  [Player-2] 被打囉。
+[2026/02/21 16:33:18] INFO  [Player-2] 被打囉。
+[2026/02/21 16:39:33] INFO  [Player-0] 被打囉。
+[2026/02/21 17:23:55] INFO  [Player-3] 被打囉。
+[2026/02/21 17:25:24] INFO  [Player-3] 被打囉。
+[2026/02/21 17:33:47] INFO  [Player-3] 被打囉。
+[2026/02/21 18:16:58] INFO  [Player-3] 被打囉。
+[2026/02/21 18:17:02] INFO  [Player-2] 被打囉。
+[2026/02/21 18:17:09] INFO  [Player-2] 被打囉。
+[2026/02/21 18:17:45] INFO  [Player-3] 被打囉。
+[2026/02/21 18:17:57] INFO  [Player-2] 被打囉。
+[2026/02/21 18:27:35] INFO  [Player-0] 被打囉。
+[2026/02/21 18:37:42] INFO  [Player-3] 被打囉。
+[2026/02/21 18:39:49] INFO  [Player-0] 被打囉。
+[2026/02/21 18:47:56] INFO  [Player-2] 被打囉。
+[2026/02/21 18:47:57] INFO  [Player-2] 被打囉。
+[2026/02/21 18:53:09] INFO  [Player-3] 被打囉。
+[2026/02/21 18:54:09] INFO  [Player-2] 被打囉。
+[2026/02/21 18:54:59] INFO  [Player-0] 被打囉。
+[2026/02/21 18:56:35] INFO  [Player-2] 被打囉。
+[2026/02/21 19:08:15] INFO  [Player-2] 被打囉。
+[2026/02/21 19:08:22] INFO  [Player-2] 被打囉。
+[2026/02/21 19:10:11] INFO  [Player-2] 被打囉。
+[2026/02/21 19:12:15] INFO  [Player-2] 被打囉。
+[2026/02/21 19:19:32] INFO  [Player-2] 被打囉。
+[2026/02/21 19:19:33] INFO  [Player-2] 被打囉。
+[2026/02/21 19:19:48] INFO  [Player-2] 被打囉。
+[2026/02/21 19:21:56] INFO  [Player-2] 被打囉。
+[2026/02/21 19:25:04] INFO  [Player-3] 被打囉。
+[2026/02/21 19:25:09] INFO  [Player-3] 被打囉。
+[2026/02/21 19:28:04] INFO  [Player-3] 被打囉。
+[2026/02/21 19:29:29] INFO  [Player-3] 被打囉。
+[2026/02/21 19:30:48] INFO  [Player-2] 被打囉。
+[2026/02/21 19:31:11] INFO  [Player-2] 被打囉。
+[2026/02/21 19:31:12] INFO  [Player-2] 被打囉。
+[2026/02/21 19:32:38] INFO  [Player-0] 被打囉。
+[2026/02/21 19:33:48] INFO  [Player-2] 被打囉。
+[2026/02/21 19:35:36] INFO  [Player-2] 被打囉。
+[2026/02/21 19:36:35] INFO  [Player-0] 被打囉。
+[2026/02/21 19:37:18] INFO  [Player-0] 被打囉。
+[2026/02/21 19:45:28] INFO  [Player-0] 被打囉。
+[2026/02/21 19:45:29] INFO  [Player-0] 被打囉。
+[2026/02/21 19:51:28] INFO  [Player-3] 被打囉。
+[2026/02/21 19:57:52] INFO  [Player-0] 被打囉。
+[2026/02/21 19:57:52] INFO  [Player-0] 被打囉。
+[2026/02/21 20:00:38] INFO  [Player-0] 被打囉。
+[2026/02/21 20:00:50] INFO  [Player-2] 被打囉。
+[2026/02/21 20:03:24] INFO  [Player-3] 被打囉。
+[2026/02/21 20:05:50] INFO  [Player-2] 被打囉。
+[2026/02/21 20:12:10] INFO  [Player-3] 被打囉。
+[2026/02/21 20:13:30] INFO  [Player-2] 被打囉。
+[2026/02/21 20:15:22] INFO  [Player-2] Thread-2 已停止
+[2026/02/21 20:15:23] INFO  [Player-0] Thread-0 已停止
+[2026/02/21 20:15:23] INFO  [Player-3] Thread-3 已停止
+[2026/02/21 20:17:48] INFO  [MainThread] Thread-2 初始化完成
+[2026/02/21 20:17:48] INFO  [Player-2] Thread-2: wName=rtc9, HWND=1967088, profile=法師.ini
+[2026/02/21 20:18:02] INFO  [MainThread] Thread-3 初始化完成
+[2026/02/21 20:18:02] INFO  [Player-3] Thread-3: wName=ge9, HWND=396456, profile=騎士.ini
+[2026/02/21 20:18:05] INFO  [MainThread] Thread-0 初始化完成
+[2026/02/21 20:18:05] INFO  [Player-0] Thread-0: wName=wsh9, HWND=1115228, profile=妖精.ini
+[2026/02/21 20:21:25] INFO  [Player-3] 被打囉。
+[2026/02/21 20:22:46] INFO  [Player-3] 被打囉。
+[2026/02/21 20:22:47] INFO  [Player-3] 被打囉。
+[2026/02/21 20:23:27] INFO  [Player-3] 被打囉。
+[2026/02/21 20:23:28] INFO  [Player-3] 被打囉。
+[2026/02/21 20:29:21] INFO  [Player-3] 被打囉。

@@ -1,0 +1,8 @@
+﻿王族（Prince）.
+騎士（Knight）. 
+妖精（Elf）. 
+法师（Wizard）.
+黑暗妖精（Dark Elf）. 
+槍手（Gunman）. 
+龍騎士（Dragon Warrior）. 
+暗黑騎士（Dark Knight）

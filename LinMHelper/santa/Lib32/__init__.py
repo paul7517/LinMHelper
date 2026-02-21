@@ -2,12 +2,13 @@ import win32gui
 from re import search
 import win32con
 from win32ui import CreateDCFromHandle,CreateBitmap
-from numpy import fromstring
+from numpy import frombuffer
 from cv2 import cvtColor,COLOR_BGR2RGB
 from PIL import Image
 from win32gui import FindWindowEx, PostMessage, SetForegroundWindow, SendMessage
 from time import sleep
-from numpy.core.numerictypes import void
+from santa.logger import log
+
 from sys import exc_info
 from ctypes.wintypes import WPARAM
 
@@ -63,13 +64,13 @@ def getWindow_Img(hwnd):
         bmp.CreateCompatibleBitmap(srcdc, width, height)
         memdc.SelectObject(bmp)
         memdc.BitBlt((0 , 0), (width, height), srcdc, (0, 0), win32con.SRCCOPY)
-    except:
-        print('複製圖層錯誤:' , exc_info()[0])
+    except Exception as e:
+        log.error('複製圖層錯誤: %s', e)
         return None
     
     # 將 bitmap 轉換成 np
     signedIntsArray = bmp.GetBitmapBits(True)
-    imgArray = fromstring(signedIntsArray, dtype='uint8')
+    imgArray = frombuffer(signedIntsArray, dtype='uint8')
     imgArray.shape = (height, width, 4)  # png，具有透明度的
     
     imgArray = cvtColor(imgArray,COLOR_BGR2RGB)
@@ -103,8 +104,8 @@ def getWindow_Img(hwnd):
         try:
             win32gui.SetLayeredWindowAttributes(hwnd, 0, 255, win32con.LWA_ALPHA)
             win32gui.SystemParametersInfo(win32con.SPI_SETANIMATION, 1)
-        except:
-            void
+        except Exception:
+            pass
     # 回傳圖片
     return img
 
@@ -148,7 +149,7 @@ def postMessage(hwnd,key):
         #PostMessage(id2,win32con.WM_KEYDOWN,k,0)
         #PostMessage(id2,win32con.WM_KEYUP,k,0)
     else:
-        print('設定的熱鍵不合法，只能為0-9')
+        log.warning('設定的熱鍵不合法，只能為0-9')
 
 def setWindowPosition(hwnd,x,y,width,height):
     win32gui.SetWindowPos(hwnd, win32con.HWND_BOTTOM, x, y, width, height, win32con.SWP_NOACTIVATE)

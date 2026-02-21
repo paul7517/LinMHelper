@@ -1,5 +1,4 @@
-pypiwin32
+pywin32
 numpy
 opencv-python
 Pillow
-pylint

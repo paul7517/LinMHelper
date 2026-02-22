@@ -49,10 +49,10 @@ class LinMHelperApp():
     def __init__(self):
         self.root = tk.Tk()
         self.root.title('LinM Helper')
-        self.root.geometry('920x320')
+        self.root.geometry('940x350')
         self.root.resizable(True, True)
         self.root.configure(bg=COLORS['bg'])
-        self.root.minsize(700, 280)
+        self.root.minsize(800, 300)
         
         # 實例屬性
         self.config = ConfigParser()
@@ -239,10 +239,10 @@ class LinMHelperApp():
         tk.Label(card, text='視窗', font=FONT_SMALL,
                  bg=bg, fg=COLORS['fg_dim']).pack(side='left', padx=(4, 2))
         
-        wName = tk.Text(card, height=1, width=10, font=FONT,
+        wName = tk.Text(card, height=1, width=12, font=FONT_BOLD,
                         bg=COLORS['input_bg'], fg=COLORS['input_fg'],
                         insertbackground=COLORS['fg'],
-                        relief='flat', borderwidth=0, padx=4, pady=2)
+                        relief='flat', borderwidth=0, padx=6, pady=4)
         wName.pack(side='left', padx=2)
         self.wNameList.append(wName)
         
@@ -267,9 +267,9 @@ class LinMHelperApp():
         self.wInfoList.append(wInfo)
         
         # 執行按鈕
-        btnToggle = tk.Label(card, text='○ 已停止', font=FONT_BOLD, width=9,
+        btnToggle = tk.Label(card, text='○ 已停止', font=FONT_BOLD, width=10,
                               bg=COLORS['input_bg'], fg=COLORS['fg_dim'],
-                              cursor='hand2', padx=6, pady=2, relief='flat')
+                              cursor='hand2', padx=8, pady=4, relief='flat')
         btnToggle.bind('<Button-1>', lambda e, idx=i: self.toggle_it(idx))
         btnToggle.pack(side='right', padx=2)
         self.btnList.append(btnToggle)

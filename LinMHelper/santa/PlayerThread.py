@@ -232,12 +232,22 @@ class PlayerThread(Thread):
         info = ""
         sleepTime = 1  # 預設
         
-        # === 被攻擊處理 ===
-        if state['isAttacked'] and (now - ctx['lastHomeTeleport']).seconds > 3:
+        hp = state['hp']
+        mp = state['mp']
+
+        # === 終極保命：回捲判斷優先級最高 ===
+        # (避免血量已經見底時，遭玩家攻擊卻飛走而非回村)
+        if hp < ctx['hpBackHome'] and hp > 0 and (now - ctx['lastHomeTeleport']).total_seconds() >= 5:
+            return self._action_back_home(ctx, state, now, info)
+
+        # === 被攻擊處理 (防PVP) ===
+        # 修正: 原本誤用 lastHomeTeleport 計時，導致不斷施放瞬移
+        if state['isAttacked'] and (now - ctx['lastRndTeleport']).total_seconds() > 3:
             self.pressKey(hwnd, wName, ctx['teleportKey'])
-            info += "被打囉。"
+            info += "被打囉，執行瞬移避難。"
             self.logToConsole(info)
             ctx['lastRndTeleport'] = now
+            return info, 1.5  # 瞬移後停頓等待畫面過渡，不執行其他魔法
         else:
             ctx['lastNotAttacked'] = now
         
@@ -253,12 +263,6 @@ class PlayerThread(Thread):
         
         # === 戰鬥邏輯 ===
         info += "戰鬥狀態:%r," % state['isAttack']
-        hp = state['hp']
-        mp = state['mp']
-        
-        # 回捲判斷
-        if hp < ctx['hpBackHome'] and hp > 0 and (now - ctx['lastHomeTeleport']).seconds >= 5:
-            return self._action_back_home(ctx, state, now, info)
         
         # 解毒
         if state['isPosion']:
@@ -280,7 +284,8 @@ class PlayerThread(Thread):
             return info, 0.4
         
         # 妖精非戰鬥時魂體轉換
-        if not state['isAttack'] and mp < 90 and ctx['role'] == 'ELF' and mp >= 0:
+        # 修正: 增加 HP 安全門檻檢查，避免非戰鬥血太少時一直洗魂體導致意外死亡
+        if not state['isAttack'] and mp < 90 and ctx['role'] == 'ELF' and mp >= 0 and hp >= ctx['mpTransHP']:
             self.pressKey(hwnd, wName, ctx['transHpKey'])
             info += "MP<90%，施放魂體轉換。"
             return info, 1.4
@@ -396,11 +401,17 @@ class PlayerThread(Thread):
                 rst = result.stdout.strip()
                 if rst and rst[0:5] == 'error':
                     log.error('ADB error: %s', rst)
-                    ipAddr = rst.split("'")[1]
-                    log.info('嘗試重新連線: %s', ipAddr)
-                    reconnectCmd = emulator_config.build_adb_connect_cmd(ipAddr)
-                    reconnResult = subprocess.run(reconnectCmd, shell=True, capture_output=True, text=True, timeout=10)
-                    log.info('重連結果: %s', reconnResult.stdout.strip())
+                    # 安全截取 IP 避免分割錯誤
+                    import re
+                    match = re.search(r'([\d\.]+:[\d]+)', rst)
+                    if match:
+                        ipAddr = match.group(1)
+                        log.info('嘗試重新連線: %s', ipAddr)
+                        reconnectCmd = emulator_config.build_adb_connect_cmd(ipAddr)
+                        reconnResult = subprocess.run(reconnectCmd, shell=True, capture_output=True, text=True, timeout=10)
+                        log.info('重連結果: %s', reconnResult.stdout.strip())
+                    else:
+                        log.error('無法從 ADB 錯誤中解析出 IP 位址')
             except subprocess.TimeoutExpired:
                 log.warning('adb_tap 逾時: %s', wName)
             except Exception as e:
